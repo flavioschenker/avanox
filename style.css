@@ -1,0 +1,279 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+b, strong {
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+main {
+    background-color: rgba(25, 25, 25, 1);
+    /* background-image: url('stripes.webp'); */
+    background-size: 100% auto;
+    background-position: center;
+}
+
+main > * {
+    padding: 7rem 0rem;
+}
+
+main > *:nth-child(odd) {
+    background-color: rgba(90, 90, 90, 0.1);
+}
+main > *:nth-child(even) {
+    background-color: rgba(30, 30, 30, 0.1);
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.row_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.col_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+@media (max-width: 768px) {
+    * {
+        font-size: 1rem;
+    }
+    .container {
+        padding: 0rem 2rem;
+    }
+    .col_wrapper {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.center {
+    justify-content: center;
+}
+.between {
+    justify-content: space-between;
+}
+.same {
+    justify-content: center;
+}
+.same > *{
+    flex: 1 1 0;
+    min-width: 0;
+}
+.left {
+    justify-content: left;
+}
+.right {
+    justify-content: right;
+}
+._1_2 > :nth-child(1){
+    flex: 1;
+    min-width: 0;
+}
+._1_2 > :nth-child(2){
+    flex: 2;
+    min-width: 0;
+}
+._2_1 > :nth-child(1){
+    flex: 2;
+    min-width: 0;
+}
+._2_1 > :nth-child(2){
+    flex: 1;
+    min-width: 0;
+}
+
+
+.btn {
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 1rem;
+    text-transform: uppercase;
+}
+.filled {
+    background-image: linear-gradient(272.03deg, #8a40a0 2.63%, #16b3de 95.31%);
+}
+
+.btn:hover{
+    background-color: rgba(0,225,255,1);
+    box-shadow: 0px 0px 3rem 1rem rgba(0,225,255,1);}
+
+
+
+/* Intro */
+.intro {
+    text-align: left;
+}
+.intro h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Technology */
+.technology .col_wrapper {
+    align-items: start;
+    list-style-position: inside;
+}
+
+.technology h3{
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.technology li{
+    text-align: left;
+	padding: 2rem;
+	border-radius: 1rem;
+    background-color: #00000099;
+}
+.technology li:hover {
+    box-shadow: 0px 0px 2rem 0.5rem rgba(0,225,255,1);
+}
+.technology li + li {
+    margin-top: 2rem;
+}
+
+/* Trust */
+.trust .col_wrapper {
+    align-items: center;
+}
+.content_box {
+    background-color: #00000099;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: left;
+}
+.content_box:hover {
+    box-shadow: 0px 0px 2rem 0.5rem rgba(0,225,255,1);
+}
+
+.content_box > h4 {
+    position: relative;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.content_box > h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #16b3de;
+    border-radius: 2px;
+}
+
+.content_box:nth-of-type(even) > h4::before {
+    background-color: #c669e2
+}
+
+/* Outro */
+.outro {
+    text-align: left;
+}
+.outro h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+header {
+    background-image: url('img/header_bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+.menu {
+    background-color: rgba(19, 19, 19, 0.7);
+    padding: 1rem 0rem;
+}
+
+.menu .col_wrapper {
+    align-items: center;
+
+}
+
+.logo {
+    height: 5rem;
+}
+
+.overlay {
+    margin-top: 7rem;
+    color: white;
+    height: 100%;
+}
+
+/* Heading and paragraph styling */
+h1 {
+    font-size: 5rem;
+    font-weight: 400;
+}
+h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    text-align: center;
+}
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .nav-links li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    header h1, footer p {
+        text-align: center;
+    }
+}
